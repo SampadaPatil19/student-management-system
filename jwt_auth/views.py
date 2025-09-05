@@ -11,3 +11,6 @@ class StudentModelViewSet(viewsets.ModelViewSet):
     serializer_class = StudentSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
+
+def home(request):
+    return render(request, "home.html")

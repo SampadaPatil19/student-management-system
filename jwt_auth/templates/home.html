@@ -1,0 +1,61 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<script src="{% static 'js/script.js' %}" defer></script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    
+</head>
+<body>
+    <h1>Student Management (JWT API)</h1>
+
+    <!-- Login Form -->
+    <h2>Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <p id="loginStatus"></p>
+
+    <hr>
+
+    <!-- Add Student Form -->
+    <h2>Add Student</h2>
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="text" id="roll" placeholder="Roll No" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="course" placeholder="Course">
+        <button type="submit">Add Student</button>
+    </form>
+
+    <p id="studentStatus"></p>
+
+    <hr>
+
+<!-- Student List -->
+<h2>All Students</h2>
+<button onclick="getStudents()">Refresh List</button>
+
+<table id="studentTable" border="1" style="width:100%; border-collapse: collapse; text-align:left;">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Roll</th>
+            <th>City</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="studentList"></tbody>
+</table>
+
+</body>
+</html>
