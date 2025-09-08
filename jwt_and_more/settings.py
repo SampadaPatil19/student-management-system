@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,9 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)j_q1j7$wv6tmz!@he*vxqyz_(w)snbg3bv*3(o=i4db-lb-dw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-import os
+
 DEBUG = False
-ALLOWED_HOSTS = ["*"]  # Render will assign domain
+ALLOWED_HOSTS = ["student-management-system-ohyo.onrender.com"]  # Render will assign domain
+CSRF_TRUSTED_ORIGINS = ['https://student-management-system-ohyo.onrender.com']
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 
