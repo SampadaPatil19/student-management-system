@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-)j_q1j7$wv6tmz!@he*vxqyz_(w)snbg3bv*3(o=i4db-lb-dw
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
-ALLOWED_HOSTS = ["student-management-system-ohyo.onrender.com"]  # Render will assign domain
+DEBUG = True
+ALLOWED_HOSTS = ["*"]  # Render will assign domain
 CSRF_TRUSTED_ORIGINS = ['https://student-management-system-ohyo.onrender.com']
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
